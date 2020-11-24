@@ -12,8 +12,9 @@ const IndexPage = () => (
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-      Test Commit
+      Test Commit i did but doesnt let me commit to main im going to try forking
+      this one more time. umm maybe a github permission error, i can commit to
+      the main repo probably because it's in my github account
     </div>
     <Link to="/demo-1/">Go to Demo 1</Link> <br />
     <Link to="/demo-2/">Go to Demo 2 - with billing page css</Link> <br />
