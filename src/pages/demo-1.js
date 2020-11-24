@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import cleanupServicebot from "../functions/cleanup-servicebot"
 
 const SecondPage = () => {
   useEffect(() => {
@@ -23,9 +24,14 @@ const SecondPage = () => {
         "https://js.servicebot.io/embeds/servicebot-billing-settings-embed.js"
       s.async = true
       s.type = "text/javascript"
+      s.id = "servicebot-embed-js"
       var x = document.getElementsByTagName("script")[0]
       x.parentNode.insertBefore(s, x)
     })()
+
+    return () => {
+      cleanupServicebot()
+    }
   })
 
   return (

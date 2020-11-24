@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import cleanupServicebot from "../functions/cleanup-servicebot"
 
 const DemoTwo = () => {
   useEffect(() => {
@@ -25,12 +26,7 @@ const DemoTwo = () => {
     })()
 
     return () => {
-      document.getElementById("servicebot-embed-js").remove()
-      // remove style tag by ID if we have it
-      var sbStyle = document.getElementById("servicebot-embed-style")
-      if (sbStyle) {
-        sbStyle.remove()
-      }
+      cleanupServicebot()
     }
   })
 
